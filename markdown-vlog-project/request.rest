@@ -1,0 +1,4 @@
+GET http://localhost:4000/articles/6147385f86412b7c67dfc047
+
+###
+GET http://localhost:4000/articles/article/allusers
