@@ -1,0 +1,7 @@
+body{
+    background : linear-gradient(to right , hsl(200 , 100% , 8%) , hsl(200 , 100% , 16%)); 
+}
+
+.divcolor{
+    background:linear-gradient(to right , hsl(0 , 0% , 70%) , hsl(0 , 0% , 90%));
+}
