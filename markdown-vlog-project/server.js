@@ -5,6 +5,7 @@ const articleRouter = require('./routes/article')
 const Article = require('./models/articledb')
 const app = express()
 app.set('view engine' , 'ejs') 
+app.use(express.static('.'));
 app.use(express.json())
 
 mongoose.connect('mongodb://localhost/markdownVlog' ,   //Database in mongodb is markdownVlog

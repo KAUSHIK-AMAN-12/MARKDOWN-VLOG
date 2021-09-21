@@ -3,5 +3,5 @@ body{
 }
 
 .divcolor{
-    background:linear-gradient(to right , hsl(0 , 0% , 70%) , hsl(0 , 0% , 90%));
+    background:linear-gradient(to right , hsl(0 , 0% , 80%) , hsl(0 , 0% , 90%));
 }
