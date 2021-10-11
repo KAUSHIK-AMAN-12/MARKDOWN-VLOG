@@ -1,14 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const methodOverride = require('method-override')
-const articleRouter = require('./routes/article')
-const Article = require('./models/articledb')
+const methodOverride = require('method-override')    //use for override post-get
+const articleRouter = require('./routes/article')      // for routing
+const Article = require('./models/articledb')          //for database importing
 const app = express()
+
 app.set('view engine' , 'ejs') 
 app.use(express.static('.'));
 app.use(express.json())
 
-mongoose.connect('mongodb://localhost/markdownVlog' ,   //Database in mongodb is markdownVlog
+mongoose.connect('mongodb://localhost/markdownVlog' ,      //Database in mongodb is markdownVlog
 {useNewUrlParser : true , useUnifiedTopology : true,
     usecreateIndexes : true})
 
@@ -44,6 +45,8 @@ app.get('/',async(req,res)=>
     let articles = await Article.find().sort({createdAt : 'desc'}); //sorted on the base of creation
     res.render('articles/index' , {articles : articles })
 })
+
+
 
 app.use('/articles', articleRouter )
 

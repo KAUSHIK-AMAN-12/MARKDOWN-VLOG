@@ -44,7 +44,7 @@ if (this.title)            //-> create slug by title
 {
     this.slug = slugify(this.title, { lower : true , strict : true}) //-> lower : true -> for lower case
                                         //strict-> to force our slugift to get rid of unwanted character
-
+}
 if(this.markdown)
 {
     this.sanitizedHtml = dompurify.sanitize(marked(this.markdown))  //-> convert markdown to html and thn sanitizes it
@@ -52,7 +52,7 @@ if(this.markdown)
 }
 
 next()
-}
+
 })
 
 

@@ -1,7 +1,46 @@
+*, *::after,::before{
+box-sizing: border-box;
+}
+
 body{
-    background : linear-gradient(to right , hsl(200 , 100% , 8%) , hsl(200 , 100% , 16%)); 
+    margin:0;
+    background-image : url("../images/beautiful-evening-purple-sunset-4k-vt.jpg");
+    background-size :cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .divcolor{
-    background:linear-gradient(to right , hsl(0 , 0% , 80%) , hsl(0 , 0% , 90%));
+    background:linear-gradient(to right , hsla(0 , 100% , 0%,0.7) , hsla(0 , 100% , 0%,0.5));
+}
+
+.datediv{
+    color : white;
+    font-family: lighter;
+    margin-top: 10px;
+}
+.datediv::before{
+content : 'Date : ';
+color : white;
+}
+.articletitle{
+    color : white;
+    font-weight: bold;
+    font-size : 1.2em;
+}
+.articletitle::before{
+    content : 'Title : ';
+    color : white;
+}
+
+.descriptiondiv{
+color : white;
+font-weight: lighter;
+}
+
+.descriptiondiv::before{
+    content : 'Description : ';
+    color : white;
+    font-weight: bold;
 }
